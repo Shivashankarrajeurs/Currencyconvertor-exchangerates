@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<style>
+  .helpbtn{
+    display:flex;
+    justify-content: end;
+    padding-right: 10px;
+    position: fixed; /* Fixes the position */
+  bottom: 20px;     /* Keep it 20px from the bottom */
+  right: 20px;      /* Keep it 20px from the right */
+  z-index: 9999; 
+  }
+  .formctnt {
+    width: 500px; 
+    margin: 0 auto; /* Centers horizontally */
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+  
+</style>
+</head>
+<body class="bg-light">
+    <%- include('header.ejs') %>
+    <br><br><br><br>
+    <div class="helpbtn">
+    <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Help?</button>
+
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Currencies(Country name)</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ol>
+      <li>ADA: Cardano (Cryptocurrency)</li>
+      <li>AED: United Arab Emirates Dirham (United Arab Emirates)</li>
+      <li>AFN: Afghan Afghani (Afghanistan)</li>
+      <li>ALL: Albanian Lek (Albania)</li>
+      <li>AMD: Armenian Dram (Armenia)</li>
+      <li>ANG: Netherlands Antillean Guilder (Netherlands Antilles)</li>
+      <li>AOA: Angolan Kwanza (Angola)</li>
+      <li>ARB: Arbitrum (Cryptocurrency)</li>
+      <li>ARS: Argentine Peso (Argentina)</li>
+      <li>AUD: Australian Dollar (Australia)</li>
+      <li>AWG: Aruban Florin (Aruba)</li>
+      <li>AZN: Azerbaijani Manat (Azerbaijan)</li>
+      <li>BAM: Convertible Mark (Bosnia and Herzegovina)</li>
+      <li>BBD: Barbadian Dollar (Barbados)</li>
+      <li>BDT: Bangladeshi Taka (Bangladesh)</li>
+      <li>BGN: Bulgarian Lev (Bulgaria)</li>
+      <li>BHD: Bahraini Dinar (Bahrain)</li>
+      <li>BIF: Burundian Franc (Burundi)</li>
+      <li>BMD: Bermudian Dollar (Bermuda)</li>
+      <li>BNB: Binance Coin (Cryptocurrency)</li>
+      <li>BND: Brunei Dollar (Brunei)</li>
+      <li>BOB: Bolivian Boliviano (Bolivia)</li>
+      <li>BRL: Brazilian Real (Brazil)</li>
+      <li>BSD: Bahamian Dollar (Bahamas)</li>
+      <li>BTC: Bitcoin (Cryptocurrency)</li>
+      <li>BTN: Bhutanese Ngultrum (Bhutan)</li>
+      <li>BWP: Botswana Pula (Botswana)</li>
+      <li>BYN: Belarusian Ruble (Belarus)</li>
+      <li>BYR: Belarusian Ruble (Old, Belarus)</li>
+      <li>BZD: Belize Dollar (Belize)</li>
+      <li>CAD: Canadian Dollar (Canada)</li>
+      <li>CDF: Congolese Franc (Congo)</li>
+      <li>CHF: Swiss Franc (Switzerland)</li>
+      <li>CLF: Chilean Unit of Account (Chile)</li>
+      <li>CLP: Chilean Peso (Chile)</li>
+      <li>CNY: Chinese Yuan (China)</li>
+      <li>COP: Colombian Peso (Colombia)</li>
+      <li>CRC: Costa Rican Colón (Costa Rica)</li>
+      <li>CUC: Cuban Convertible Peso (Cuba)</li>
+      <li>CUP: Cuban Peso (Cuba)</li>
+      <li>CVE: Cape Verdean Escudo (Cape Verde)</li>
+      <li>CZK: Czech Koruna (Czech Republic)</li>
+      <li>DAI: Dai (Cryptocurrency)</li>
+      <li>DJF: Djiboutian Franc (Djibouti)</li>
+      <li>DKK: Danish Krone (Denmark)</li>
+      <li>DOP: Dominican Peso (Dominican Republic)</li>
+      <li>DOT: Polkadot (Cryptocurrency)</li>
+      <li>DZD: Algerian Dinar (Algeria)</li>
+      <li>EGP: Egyptian Pound (Egypt)</li>
+      <li>ERN: Eritrean Nakfa (Eritrea)</li>
+      <li>ETB: Ethiopian Birr (Ethiopia)</li>
+      <li>ETH: Ethereum (Cryptocurrency)</li>
+      <li>EUR: Euro (European Union)</li>
+      <li>FJD: Fijian Dollar (Fiji)</li>
+      <li>FKP: Falkland Islands Pound (Falkland Islands)</li>
+      <li>GBP: British Pound (United Kingdom)</li>
+      <li>GEL: Georgian Lari (Georgia)</li>
+      <li>GGP: Guernsey Pound (Guernsey)</li>
+      <li>GHS: Ghanaian Cedi (Ghana)</li>
+      <li>GIP: Gibraltar Pound (Gibraltar)</li>
+      <li>GMD: Gambian Dalasi (Gambia)</li>
+      <li>GNF: Guinean Franc (Guinea)</li>
+      <li>GTQ: Guatemalan Quetzal (Guatemala)</li>
+      <li>GYD: Guyanese Dollar (Guyana)</li>
+      <li>HKD: Hong Kong Dollar (Hong Kong)</li>
+      <li>HNL: Honduran Lempira (Honduras)</li>
+      <li>HRK: Croatian Kuna (Croatia)</li>
+      <li>HTG: Haitian Gourde (Haiti)</li>
+      <li>HUF: Hungarian Forint (Hungary)</li>
+      <li>IDR: Indonesian Rupiah (Indonesia)</li>
+      <li>ILS: Israeli New Shekel (Israel)</li>
+      <li>IMP: Isle of Man Pound (Isle of Man)</li>
+      <li>INR: Indian Rupee (India)</li>
+      <li>IQD: Iraqi Dinar (Iraq)</li>
+      <li>IRR: Iranian Rial (Iran)</li>
+      <li>ISK: Icelandic Krona (Iceland)</li>
+      <li>JEP: Jersey Pound (Jersey)</li>
+      <li>JMD: Jamaican Dollar (Jamaica)</li>
+      <li>JOD: Jordanian Dinar (Jordan)</li>
+      <li>JPY: Japanese Yen (Japan)</li>
+      <li>KES: Kenyan Shilling (Kenya)</li>
+      <li>KGS: Kyrgyzstani Som (Kyrgyzstan)</li>
+      <li>KHR: Cambodian Riel (Cambodia)</li>
+      <li>KMF: Comorian Franc (Comoros)</li>
+      <li>KPW: North Korean Won (North Korea)</li>
+      <li>KRW: South Korean Won (South Korea)</li>
+      <li>KWD: Kuwaiti Dinar (Kuwait)</li>
+      <li>KYD: Cayman Islands Dollar (Cayman Islands)</li>
+      <li>KZT: Kazakhstani Tenge (Kazakhstan)</li>
+      <li>LAK: Lao Kip (Laos)</li>
+      <li>LBP: Lebanese Pound (Lebanon)</li>
+      <li>LKR: Sri Lankan Rupee (Sri Lanka)</li>
+      <li>LRD: Liberian Dollar (Liberia)</li>
+      <li>LSL: Lesotho Loti (Lesotho)</li>
+      <li>LTC: Litecoin (Cryptocurrency)</li>
+      <li>LVL: Latvian Lats (Latvia, old)</li>
+      <li>LYD: Libyan Dinar (Libya)</li>
+      <li>MAD: Moroccan Dirham (Morocco)</li>
+      <li>MDL: Moldovan Leu (Moldova)</li>
+      <li>MGA: Malagasy Ariary (Madagascar)</li>
+      <li>MKD: Macedonian Denar (North Macedonia)</li>
+      <li>MMK: Myanmar Kyat (Myanmar)</li>
+      <li>MNT: Mongolian Tögrög (Mongolia)</li>
+      <li>MOP: Macanese Pataca (Macau)</li>
+      <li>MRO: Mauritanian Ouguiya (Mauritania, old)</li>
+      <li>MUR: Mauritian Rupee (Mauritius)</li>
+      <li>MVR: Maldivian Rufiyaa (Maldives)</li>
+      <li>MWK: Malawian Kwacha (Malawi)</li>
+      <li>MXN: Mexican Peso (Mexico)</li>
+      <li>MYR: Malaysian Ringgit (Malaysia)</li>
+      <li>MZN: Mozambican Metical (Mozambique)</li>
+      <li>NAD: Namibian Dollar (Namibia)</li>
+      <li>NGN: Nigerian Naira (Nigeria)</li>
+      <li>NIO: Nicaraguan Córdoba (Nicaragua)</li>
+      <li>NOK: Norwegian Krone (Norway)</li>
+      <li>NPR: Nepalese Rupee (Nepal)</li>
+      <li>NZD: New Zealand Dollar (New Zealand)</li>
+      <li>OMR: Omani Rial (Oman)</li>
+      <li>PAB: Panamanian Balboa (Panama)</li>
+      <li>PEN: Peruvian Sol (Peru)</li>
+      <li>PHP: Philippine Peso (Philippines)</li>
+      <li>PKR: Pakistani Rupee (Pakistan)</li>
+      <li>PLN: Polish Zloty (Poland)</li>
+      <li>PYG: Paraguayan Guarani (Paraguay)</li>
+      <li>QAR: Qatari Riyal (Qatar)</li>
+      <li>RON: Romanian Leu (Romania)</li>
+      <li>SLL: Sierra Leonean Leone (Sierra Leone)</li>
+      <li>SOS: Somali Shilling (Somalia)</li>
+      <li>SRD: Surinamese Dollar (Suriname)</li>
+      <li>SSP: South Sudanese Pound (South Sudan)</li>
+      <li>STD: São Tomé and Príncipe Dobra (São Tomé and Príncipe, old)</li>
+      <li>STN: São Tomé and Príncipe Dobra (São Tomé and Príncipe, current)</li>
+      <li>SVC: Salvadoran Colón (El Salvador)</li>
+      <li>SYP: Syrian Pound (Syria)</li>
+      <li>SZL: Swazi Lilangeni (Eswatini)</li>
+      <li>THB: Thai Baht (Thailand)</li>
+      <li>TJS: Tajikistani Somoni (Tajikistan)</li>
+      <li>TMT: Turkmenistani Manat (Turkmenistan)</li>
+      <li>TND: Tunisian Dinar (Tunisia)</li>
+      <li>TOP: Tongan Paʻanga (Tonga)</li>
+      <li>TRY: Turkish Lira (Turkey)</li>
+      <li>TTD: Trinidad and Tobago Dollar (Trinidad and Tobago)</li>
+      <li>TWD: New Taiwan Dollar (Taiwan)</li>
+      <li>TZS: Tanzanian Shilling (Tanzania)</li>
+      <li>UAH: Ukrainian Hryvnia (Ukraine)</li>
+      <li>UGX: Ugandan Shilling (Uganda)</li>
+      <li>USD: United States Dollar (United States)</li>
+      <li>UYU: Uruguayan Peso (Uruguay)</li>
+      <li>UZS: Uzbekistani Som (Uzbekistan)</li>
+      <li>VND: Vietnamese Dong (Vietnam)</li>
+      <li>VUV: Vanuatu Vatu (Vanuatu)</li>
+      <li>WST: Samoan Tala (Samoa)</li>
+      <li>XAF: Central African CFA Franc (Central Africa)</li>
+      <li>XAG: Silver (Precious Metal)</li>
+      <li>XAU: Gold (Precious Metal)</li>
+      <li>XCD: East Caribbean Dollar (East Caribbean)</li>
+      <li>XDR: Special Drawing Rights (IMF)</li>
+      <li>XOF: West African CFA Franc (West Africa)</li>
+      <li>XPD: Palladium (Precious Metal)</li>
+      <li>XPF: CFP Franc (French Pacific)</li>
+      <li>XPT: Platinum (Precious Metal)</li>
+      <li>YER: Yemeni Rial (Yemen)</li>
+      <li>ZAR: South African Rand (South Africa)</li>
+      <li>ZMW: Zambian Kwacha (Zambia)</li>
+      <li>ZWL: Zimbabwean Dollar (Zimbabwe)</li>
+    </ol>
+  </div>
+</div>
+</div>
+
+<br>
+<div class="container d-flex flex-column align-items-center justify-content-center min-vh-100">
+  <div class="card shadow-lg p-4 w-100" style="max-width: 400px;">
+    <form action="/rates" method="get">
+      <div class="mb-3">
+        <label for="myInput" class="form-label fw-bold">Enter Currency Code:</label>
+        <input 
+          type="text" 
+          id="myInput" 
+          name="userInput" 
+          class="form-control" 
+          placeholder="Click on help to codes view"
+        >
+      </div>
+      <button type="submit" class="btn btn-primary w-100">GET</button>
+    </form>
+  </div>
+
+  <div class="mt-4 w-100" style="max-width: 800px;">
+    <% if (locals.date) { %>
+      <div class="card shadow-lg p-4">
+        <p class="fw-semibold">Date: <%= date %></p>
+        <p class="fw-semibold">Base Currency: <%= base %></p>
+
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped">
+            <thead class="table-dark">
+              <tr>
+                <th>Currency</th>
+                <th>Rate</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% for (let currency in rates) { %>
+                <tr>
+                  <td><%= currency %></td>
+                  <td><%= rates[currency] %></td>
+                </tr>
+              <% } %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    <% } else { %>
+      <div class="text-center mt-3">
+        <% if (locals.msg) { %>
+          <p class="text-danger fw-bold"><%= msg %></p> 
+        <% } else { %>
+          <p>No data available or there was an error fetching the data.</p>
+        <% } %>
+      </div>
+    <% } %>
+  </div>
+</div>
+
+
+    <%- include('footer.ejs') %>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>   
+   <script>
+   
+
+   </script>
+</body>
+</html>

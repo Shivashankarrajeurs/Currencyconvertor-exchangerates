@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TransactEase</title>
+    
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Google Fonts for a Modern Look -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            padding-top: 70px; 
+        }
+        
+        .navbar {
+            background-color: #1c1c1c !important;
+            padding: 15px 20px;
+        }
+        
+        .navbar-brand h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin: 0;
+            color: #ffcc00;
+        }
+
+        .nav-link {
+            font-size: 1.1rem;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .nav-link:hover {
+            color: #ffcc00 !important;
+        }
+
+        .offcanvas {
+            background-color: green;
+        }
+
+        .offcanvas-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .dropdown-menu {
+            background-color: #292929;
+        }
+
+        .dropdown-item:hover {
+            background-color: #ffcc00;
+            color: #121212;
+        }
+
+        
+        @media (max-width: 768px) {
+            .navbar-brand h1 {
+                font-size: 1.5rem;
+            }
+            .nav-link {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+  
+  <nav class="navbar navbar-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><h1>TransactEase</h1></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Navigation</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active text-dark "  style="font-weight: 600;" aria-current="page" href="/">📌Homepage</a>
+           </li>
+          <li class="nav-item">
+          <a class="nav-link text-dark" href="/Exchangerates" style="font-weight: 600;">📢Know Exchange Rates</a>
+           </li>
+
+           <li class="nav-item">
+            <a class="nav-link text-dark" href="/Conversion" style="font-weight: 600;">💰Convert Currency</a>
+             </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-weight: 600;">
+                📁 Options
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="mailto:shankarurs73@gmail.com">📞Get In Touch</a></li>
+                
+                
+              </ul>
+            </li>
+          </ul>
+
+          
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+</body>
+</html>
